@@ -1,6 +1,7 @@
 package asia.ifarmer.compressor;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
@@ -12,6 +13,27 @@ public class Test {
     public static void test(Context context, File file){
 
         JCompressor.compressImage(context, file, new JCompressor.ImageCompressed() {
+            @Override
+            public void onImageCompressed(File compressedFile) {
+                printImageDimensions(compressedFile);
+            }
+        });
+
+        JCompressor.compressImage(context, file, 1200, new JCompressor.ImageCompressed() {
+            @Override
+            public void onImageCompressed(File compressedFile) {
+                printImageDimensions(compressedFile);
+            }
+        });
+
+        JCompressor.compressImage(context, file, 1200, Bitmap.CompressFormat.WEBP, new JCompressor.ImageCompressed() {
+            @Override
+            public void onImageCompressed(File compressedFile) {
+                printImageDimensions(compressedFile);
+            }
+        });
+
+        JCompressor.compressImage(context, file, Bitmap.CompressFormat.WEBP, new JCompressor.ImageCompressed() {
             @Override
             public void onImageCompressed(File compressedFile) {
                 printImageDimensions(compressedFile);

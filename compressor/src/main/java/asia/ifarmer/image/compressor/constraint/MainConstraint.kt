@@ -27,6 +27,7 @@ open class DefaultConstraint(
         isResolved = true
         return result
     }
+
 }
 
 fun Compress.default(
