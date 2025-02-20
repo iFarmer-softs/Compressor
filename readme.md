@@ -15,26 +15,40 @@ This project is extended from [zetbaitsu/Compressor](https://github.com/zetbaits
 
 ## Installation
 
+### Requirements
+- **minSdkVersion**: 21+
+
 ### Gradle
 Add the following dependency in your `build.gradle` (Module) file:
 
 ```gradle
 dependencies {
-    implementation 'com.github.yourusername:image-compressor:1.0.0'
+    implementation 'com.github.iFarmer-softs:Compressor:Tag'
 }
 ```
-
-*(Replace `yourusername` with your actual GitHub username if using JitPack.)*
 
 ### Maven
 If you are using Maven, add the following to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.github.yourusername</groupId>
-    <artifactId>image-compressor</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.github.iFarmer-softs</groupId>
+    <artifactId>Compressor</artifactId>
+    <version>Tag</version>
 </dependency>
+```
+
+### Root `settings.gradle`
+Add the following at the end of repositories:
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 ---
@@ -136,8 +150,6 @@ public class JCompressor {
 ```
 MIT License
 
-Copyright (c) 2025 Your Name
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -166,7 +178,7 @@ Feel free to open issues and pull requests if you have improvements or bug fixes
 ---
 
 ## Author
-[ifarmer](https://github.com/iFarmer-softs)
+[iFarmer Softs](https://github.com/iFarmer-softs)
 
 ---
 
