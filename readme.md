@@ -23,7 +23,7 @@ Add the following dependency in your `build.gradle` (Module) file:
 
 ```gradle
 dependencies {
-    implementation 'com.github.iFarmer-softs:Compressor:Tag'
+    implementation 'com.github.iFarmer-softs:Compressor:version.code'
 }
 ```
 
@@ -34,7 +34,7 @@ If you are using Maven, add the following to your `pom.xml`:
 <dependency>
     <groupId>com.github.iFarmer-softs</groupId>
     <artifactId>Compressor</artifactId>
-    <version>Tag</version>
+    <version>version.code</version>
 </dependency>
 ```
 
