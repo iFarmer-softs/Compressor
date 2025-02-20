@@ -40,7 +40,6 @@ public class Test {
 
         int width = options.outWidth;
         int height = options.outHeight;
-        Log.e("res", width + " " + height);
 
     }
 
